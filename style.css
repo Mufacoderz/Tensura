@@ -1,0 +1,566 @@
+
+:root{
+    --var-biru:rgb(62, 247, 247);
+    --var-hitam-pudar:#151719;
+    --var-putih:rgb(236, 235, 235);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: var(--var-hitam-pudar);
+}
+
+.container-hero {
+    background-image: url(multimedia/hero\ pic.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.text {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    transition: 0.3s;
+    font-family: "poppins";
+}
+.text:hover{
+    color: var(--var-biru);
+    text-shadow: 2px 2px 15px rgb(0, 0, 0);
+    transform: scale(1.3);
+}
+
+/* series */
+
+.container-seri {
+    margin: 10px 30px;
+}
+
+.header-seri h2 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.header-seri hr {
+    width: 30%;
+    margin: auto;
+    border: solid 2px white;
+    margin-top: 5px;
+}
+
+.seri-flex {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.seri-items {
+    width: 300px;
+    background-color: black;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 20px -10px rgb(224, 228, 228);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.seri-items:hover{
+    box-shadow: 0px 0px 20px -5px var(--var-biru);
+    transform: scale(1.1);
+}
+
+.seri-items img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.seri-items p {
+    margin: 10px;
+}
+
+.seri-items p a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.seri-items button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.2s;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seri-items button i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: red;
+}
+
+.seri-items button:hover i {
+    color: white;
+}
+
+.seri-items button:hover {
+    background-color: rgb(25, 224, 224);
+    transform: scale(1.1);
+    color: white;
+}
+
+.seri-items .sinopsis-link:hover{
+    color: var(--var-biru);
+    text-shadow: 2px 2px 4px rgb(25, 105, 224);
+}
+
+/* sinopsis */
+
+.container-sinopsis{
+    margin-top: 50px;
+}
+.sinopsis-flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    padding: 30px;
+}
+.sinopsis-content1{
+    width: 25%;
+    margin-right: 30px;
+    transition: 0.5s;
+}
+.sinopsis-content2{
+    width: 75%;
+}
+.sinopsis-content1 img {
+    width: 100%;
+}
+/* .sinopsis-content1:hover{
+    transform: translateX(15px);
+} */
+.sinopsis-content2 p{
+    margin-top: 20px;
+    line-height: 28px;
+}
+.sinopsis-content2 button{
+    width: 25%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sinopsis-content2 button:hover{
+    background-color: var(--var-biru);
+    transform: scale(1.1);
+    color: white;
+}
+.sinopsis-flex {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.sinopsis-flex[style*="display:none"] {
+    opacity: 0;
+    transition: none;
+}
+
+
+/* chara */
+
+.container-image{
+    background-color: #000000;
+    margin: 20px;
+    box-shadow: 0px 0px 20px -10px rgb(224, 228, 228);
+    border-radius: 10px;
+    transition: 0.5s;
+    padding-top: 10px;
+}
+.container-image:hover{
+    box-shadow: 0px 0px 20px 5px var(--var-biru);
+}
+
+.header-image h2 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.image-flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    padding: 30px;
+    padding-top: 0px;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.image-container {
+    position: relative;
+    width: 15%; 
+    margin: 20px;
+
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.nama {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to top, var(--var-biru), rgba(14, 138, 255, 0.034)); 
+    transform: scaleY(1); 
+    transition: transform 0.1s ease, height 0.1s ease;
+    font-size: 20px;
+    color: rgba(8, 107, 255, 0);
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container:hover .nama {
+    height: 100px; 
+    /* transform: scaleY(1);  */
+    color: black;
+}
+
+/* tonton */
+
+.container-tonton{
+    background-color: black;
+    margin: 20px;
+    margin-top:80px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px -10px rgb(224, 228, 228);
+    transition: 0.5s;
+}
+
+.container-tonton:hover{
+    box-shadow: 0px 0px 20px 5px var(--var-biru);
+}
+
+.series {
+    width: 100%;
+    padding:10px;
+    
+}
+
+.series h2{
+    padding:10px;
+    text-align: center;
+}
+
+.series h3{
+    margin: 10px;
+}
+
+.season {
+    background-color: var(--var-hitam-pudar);
+    margin: 10px auto; 
+    padding: 10px;
+    width: 100%;  
+    border-radius: 5px;
+}
+
+.season:hover {
+    background-color: var(--var-biru);
+    color: black;
+}
+
+.season:hover ul li {
+    color: black; 
+    
+}
+
+/* .season:active{
+    background-color: black;
+    color:white;
+} */
+
+
+.season ul li{
+    margin:5px;
+    background-color: var(--var-biru);
+    width: calc(100% - 30px); 
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+}
+.season ul li:hover{
+    background-color: white;
+    color: var(--var-hitam-pudar);
+}
+
+.episodes {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.episodes li {
+    padding: 5px 0;
+}
+
+
+/* switch mode */
+
+
+#switch-mode {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    color: black;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+#switch-mode:hover {
+    background-color: var(--var-biru);
+    transform: scale(1.1);
+}
+
+/* footer */
+.container-footer {
+    background-image: url(multimedia/main\ pic.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-attachment: fixed; */
+    margin-top: 50px;
+}
+
+.text {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    transition: 0.3s;
+}
+.text:hover{
+    color: var(--var-biru);
+    text-shadow: 2px 2px 15px rgb(0, 0, 0);
+    transform: scale(1.3);
+}
+
+
+
+/* Mode terang */
+
+.light-mode {
+    background-color: var(--var-putih);
+    color: black;
+}
+
+.light-mode #switch-mode {
+    background-color: black;
+    color: white;
+}
+.light-mode #switch-mode:hover {
+    background-color: var(--var-biru);
+    color: black;
+}
+
+.light-mode #mode-icon {
+    color: white;
+}
+
+.light-mode .header-seri hr {
+        border: solid 2px black;
+}
+
+.light-mode .seri-items{
+    background-color: white;
+    box-shadow: 0px 0px 20px -10px var(--var-hitam-pudar);
+}
+
+.light-mode .seri-items:hover{
+    box-shadow: 0px 0px 20px -5px var(--var-biru);
+    transform: scale(1.1);
+}
+
+.light-mode .seri-items p a {
+    color: black;
+}
+
+
+.light-mode .sinopsis-content2 button:hover{
+    background-color: var(--var-biru);
+}
+
+.light-mode .seri-items button:hover i {
+    color: black;
+}
+
+.light-mode .seri-items button:hover {
+    background-color: var(--var-biru);
+    transform: scale(1.1);
+    color: black;
+}
+
+.light-mode .seri-items .sinopsis-link:hover{
+    color: var(--var-biru);
+    text-shadow: 2px 2px 4px var(--var-biru);
+}
+
+.light-mode .container-image{
+    background-color: white;
+}
+
+.light-mode .daftar-seri-button{
+    background-color: black;
+    color: white;
+}
+.light-mode .daftar-seri-button:hover{
+    color: black;
+    background-color: var(--var-biru-gelap);
+}
+
+.light-mode .nama{
+    background: linear-gradient(to top, var(--var-biru), rgba(14, 138, 255, 0.034));
+}
+.light-mode .seri-items button{
+    background-color:black;
+    color: white;
+}
+
+.light-mode .container-image:hover{
+    box-shadow:  0px 0px 20px 5px var(--var-biru);
+}
+.light-mode .container-tonton{
+    background-color: #fff;
+}
+.light-mode .container-tonton .season{
+    background-color: #f1f1f1;
+}
+
+/* RESPONSIVE STYLES */
+
+
+@media (max-width: 1024px) {
+    .seri-items {
+        width: 45%; 
+    }
+
+    .image-container {
+        width: 20%; 
+    }
+
+    .sinopsis-content1 {
+        width: 35%; 
+    }
+
+    .sinopsis-content2 {
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container-hero, .container-footer{
+        background-size: contain;
+        height: 40vh;
+    }
+    .container-hero div h1, .container-footer div h1{
+        font-size: 16px;
+    }
+    .container-hero div p {
+        font-size: 10px;
+    }
+    .seri-items {
+        width: 45%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .image-container {
+        width: 30%;
+    }
+
+    .sinopsis-flex {
+        flex-direction: column; 
+    }
+
+    .sinopsis-content1,
+    .sinopsis-content2 {
+        width: 100%; 
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .seri-items {
+        width: 40%; 
+       
+    }
+    .image-flex{
+        gap: 5px; 
+        justify-content: center;
+    }
+
+    .image-container {
+        width: 30%; 
+    }
+    
+
+    .sinopsis-content2 button {
+        width: 50%; 
+    }
+
+    #switch-mode {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+
+    .text {
+        font-size: 16px; 
+    }
+}
